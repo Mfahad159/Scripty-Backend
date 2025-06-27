@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend</title>
+</head>
+
+<body>
+    <h1>Welcome Welcome</h1>
+    <div class="buttons">
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+    </div>
+    <style>
+        .buttons {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        button{
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+    <script>
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+
+            return color;
+        }
+        let intervalId;
+        document.querySelector('#start').addEventListener('click', () => {
+          if(!intervalId){
+            intervalId =  setInterval(() => {
+             
+                document.body.style.backgroundColor = getRandomColor();
+            }, 1000);
+          }
+        });
+        document.querySelector('#stop').addEventListener('click', () => {
+            clearInterval(intervalId);
+            intervalId = null;
+        });
+    </script>
+</body>
+
+</html>

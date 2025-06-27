@@ -1,1 +1,4 @@
-console.log("Hello, World!");
+console.log("\n  ( * q * )");
+
+
+
