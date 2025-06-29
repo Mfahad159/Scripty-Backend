@@ -1,15 +1,16 @@
-let mypro = new Promise((resolve, reject) => {
-    let a = 3 + 1;
-    if (a == 2) {
-        resolve("Success");
-    } else {
-        reject("Failed");
+new Promise((resolve,reject)=>{
+    if(false){
+    setTimeout(()=>{
+        console.log("Hello, World!");
+    }, 1000);
+    resolve("Done!");
     }
-});
-mypro.then((message) => {
-    console.log("This is in the then " + message);
-}).catch((message) => {
-    console.log("This is in the catch " + message);
-}).finally(() => {
-    console.log("This is in the finally");
+    else{
+    reject("Error: Condition is false.");
+    }
+
+}).then((message) => {
+    console.log(message);
+}).catch((error) => {
+    console.error(error);
 });
