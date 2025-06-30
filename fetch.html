@@ -15,7 +15,7 @@
         <div class="image_title"></div>
         <img src="" alt="This is a Pikachu" id="image">
     </div>
-    <script src="fetch_02.js"></script>
+    <script src="fetch.js"></script>
     <style>
         .container {
             display: flex;
@@ -30,9 +30,11 @@
             margin-bottom: 10px;
             border-radius: 4px;
             border: 1px solid #ccc;
+            transition: border 0.15s;
         }
-        .input:focus {
-            border-color: #007BFF;
+        input:focus {
+             border: 1px solid #7e7878;
+             border-left: 4px solid rgba(35, 35, 112, 0.587);
             outline: none;
         }
         button {
@@ -43,9 +45,11 @@
             border-radius: 5px;
             background-color: #007BFF;
             color: white;
+            transition: transform 0.3s;
         }
         button:hover {
             background-color: #0056b3;
+            transform: scale(1.02);
         }
         button:active {
             background-color: #004494;
