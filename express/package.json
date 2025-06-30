@@ -1,0 +1,19 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "description": "A basic App for backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "Me",
+    "express",
+    "Run-on-dev"
+  ],
+  "author": "Mian",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
