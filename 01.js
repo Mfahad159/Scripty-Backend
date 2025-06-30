@@ -25,3 +25,4 @@ fetch('https://api.github.com/users/hiteshchoudhary')
 .catch((error) => {
    console.error('Error fetching data:', error);
 })
+
